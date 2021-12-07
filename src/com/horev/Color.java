@@ -5,6 +5,6 @@ package com.horev;
  * @author Aviad Bagno
  */
 enum Color {
-    COLOR_WHITE,
-    COLOR_BLACK
+    WHITE,
+    BLACK
 }
