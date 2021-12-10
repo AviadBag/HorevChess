@@ -1,5 +1,7 @@
 package com.horev;
 
+import java.util.Arrays;
+
 /**
  * This class represents a chess board
  * @author Aviad Bagno
@@ -74,5 +76,21 @@ public class Board {
     public PieceType getPiece(String where) {
         int[] xy = ChessCoords.chessCoordinatesToXY(where);
         return board[xy[1]][xy[0]];
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder s = new StringBuilder();
+
+        for (int col = 8; col >= 1; col--) {
+            for (char row = 'a'; row <= 'h'; row++) {
+                String coord = row+String.valueOf(col);
+                PieceType piece = getPiece(coord);
+                s.append(coord).append(": ").append(piece).append(", ");
+            }
+            s.append("\n");
+        }
+
+        return s.toString();
     }
 }
