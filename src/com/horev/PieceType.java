@@ -25,4 +25,12 @@ class PieceType {
     public Color getColor() {
         return color;
     }
+
+    @Override
+    public String toString() {
+        return "PieceType{" +
+                "type='" + type + '\'' +
+                ", color=" + color +
+                '}';
+    }
 }
